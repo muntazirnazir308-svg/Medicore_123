@@ -50,15 +50,13 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 This bot is designed exclusively for medical students 🧠
 Use /help to explore features."""
     )
-Commands:
-/mcq – Advanced MCQ
-/case – Clinical scenario
-/mnemonic – Memory aid
-/tip – Study tip
-/anki – Flashcard
-/pdf – Get PDF
-/score – Your score"
-    )
+await update.message.reply_text("""
+Available commands:
+/mcq - Advanced MCQ
+/flashcard - Random Flashcard
+/pdf - Get medical PDFs
+/help - Show help
+""")
 
 async def mcq(update: Update, context: ContextTypes.DEFAULT_TYPE):
     q = random.choice(mcqs)
