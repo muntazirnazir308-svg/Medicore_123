@@ -45,8 +45,11 @@ def save_scores():
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "👨‍⚕️ Welcome to MediCore+ Bot!
+        """👨‍⚕️ Welcome to MediCore+ Bot!
 
+This bot is designed exclusively for medical students 🧠
+Use /help to explore features."""
+    )
 Commands:
 /mcq – Advanced MCQ
 /case – Clinical scenario
